@@ -2,7 +2,7 @@
 Hey and thanks for checking this out!
 
 Made by Simple Sample
-
+Check out my art if you feel like it: https://derpibooru.org/profiles/Simple%2BSample
 
 ####What does this do?####
 
@@ -13,6 +13,11 @@ That way you will never have to check Derpibooru repeatedly for new images of yo
 Pretty simple, right?
 
 ######
+
+####Why did you make this?####
+
+Ok, I admit it. I'm kind of obsessed over Spitfire. I noticed that I was checking Derpibooru's tag of her very often, so instead I let this script do it for me.
+Yes I know it's weird. About one image of her is made every day, so I usually never find anything new. This script frees my time.
 
 #####INSTRUCTIONS#####
 
@@ -45,6 +50,12 @@ Once everything is filled in. Run the program and let it run 24/7.
 I recommend letting it check every couple of minutes in the beginning to see if it works as it should.
 ####################
 
-Check out my art if you feel like it: https://derpibooru.org/profiles/Simple%2BSample
+####Known Bugs####
+
+1. There are some brackets around the URLs in the message sent.
+2. The script sends an old image if it scans an image that later gets deleted. One can avoid this by letting the scanning interval be larger.
+#####################
+
 Spitfire is the best pony
 
+#####################
