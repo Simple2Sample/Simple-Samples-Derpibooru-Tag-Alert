@@ -2,7 +2,7 @@ https://github.com/Simple2Sample/Simple-Samples-Derpibooru-Tag-Alert
 Hey and thanks for checking this out!
 
 Made by Simple Sample
-Check out my art if you feel like it: https://derpibooru.org/profiles/Simple%2BSample
+
 
 ####What does this do?####
 
