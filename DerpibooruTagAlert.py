@@ -16,8 +16,8 @@ ReceivingMail = "" #The email you want to receive the email. It can be the same 
 key = "" #API key at https://derpibooru.org/registrations/edit
 password = "" #The password for your email. Don't worry, I will not and I cannot steal it. I barely know how to program this stuff, let alone a password stealer. Now that I think about it, I can make the program send your info to me pretty easily. DW I haven't done that. Just check the code below lol.
 
-delaytime = 15 #Minutes between each check. DO NOT SET THIS TO A VERY LOW AMOUNT. You can be banned.
-tags = "" #The tags you want to apply to your search. Separate them by comma. Ex: "Safe, Spitfire, best pony"
+delaytime = 1 #Minutes between each check. DO NOT SET THIS TO A VERY LOW AMOUNT. You can be banned.
+tags = "safe,spitfire" #The tags you want to apply to your search. Separate them by comma. Ex: "Safe, Spitfire, best pony"
 
 subject = "New Images!"   #The subject of the message you want to send!
 text = """URL(s):
@@ -48,12 +48,14 @@ while True:
 
     if newValues != oldValues: #Any new images?
         print("New images found!")
-        differenceInImages = set(newValues).difference(set(oldValues)) #Removes the images found in OldImages from NewImages and outputs the remaining images.
+        differenceInImages = str(set(newValues).difference(set(oldValues))) #Removes the images found in OldImages from NewImages and outputs the remaining images.
         oldValues = newValues #Stores the new value for next iteration.
+       
         newValues = []
+        differenceInImages = differenceInImages.replace("'",'')
 
   
-        messagetext = text+str(differenceInImages)#Combines the URLs from set to string.
+        messagetext = text+differenceInImages[1:-1]#Combines the URLs from set to string.
 
         message = 'Subject: {}\n\n{}'.format(subject, messagetext)#Formats the subject and text into a format understood by the function.
 
