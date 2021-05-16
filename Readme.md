@@ -32,7 +32,7 @@ Yes I know it's weird. About one image of her is made every day, so I usually ne
 
 *I recommend letting it check every couple of minutes in the beginning to see if it works as it should.*
 ## Known Bugs
-1. There are some brackets around the URLs in the message sent.
+1. ~~There are some brackets around the URLs in the message sent.~~ FIXED
 
 2. The script sends an old image if it scans an image that later gets deleted. One can avoid this by letting the scanning interval be larger.
 ---
