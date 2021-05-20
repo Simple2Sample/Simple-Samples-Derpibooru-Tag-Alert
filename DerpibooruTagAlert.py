@@ -46,9 +46,11 @@ while True:
     for image in Search().query(tags): #Fetch all image urls on first page
         newValues.append(image.url)
 
-    if newValues != oldValues: #Any new images?
+    checkForNewImages = set(newValues).difference(set(oldValues))
+
+    if checkForNewImages: #Any new images?
         print("New images found!")
-        differenceInImages = str(set(newValues).difference(set(oldValues))) #Removes the images found in OldImages from NewImages and outputs the remaining images.
+        differenceInImages = str(checkForNewImages) #Removes the images found in OldImages from NewImages and outputs the remaining images.
         oldValues = newValues #Stores the new value for next iteration.
        
         newValues = []

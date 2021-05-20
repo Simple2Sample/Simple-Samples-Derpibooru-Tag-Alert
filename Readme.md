@@ -34,6 +34,8 @@ Yes I know it's weird. About one image of her is made every day, so I usually ne
 ## Known Bugs
 1. ~~There are some brackets around the URLs in the message sent.~~ FIXED
 
-2. The script sends an old image if it scans an image that later gets deleted. One can avoid this by letting the scanning interval be larger.
+2. ~~The script sends an old image if it scans an image that later gets deleted.~~ FIXED
+
+All bugs have been fixed! It now works as originally intended!
 ---
 *Spitfire is the best pony*
