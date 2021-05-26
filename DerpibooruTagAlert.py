@@ -70,6 +70,7 @@ while True:
             server.login(Hostmail, password)
             server.sendmail(Hostmail, ReceivingMail, message)
     else:
-        oldValues = newValues #Stores the new value for next iteration.
+        if newValues: #Doesn't change the old value if the list is empty. This happens in case of server problems.
+            oldValues = newValues #Stores the new value for next iteration.
         newValues = []
         print("No new images")  
