@@ -17,6 +17,7 @@ key = "" #API key at https://derpibooru.org/registrations/edit
 password = "" #The password for your email. Don't worry, I will not and I cannot steal it. I barely know how to program this stuff, let alone a password stealer. Now that I think about it, I can make the program send your info to me pretty easily. DW I haven't done that. Just check the code below lol.
 
 delaytime = 15 #Minutes between each check. DO NOT SET THIS TO A VERY LOW AMOUNT. You can be banned.
+oldPicTolerance = 0.8 #Decrease this value if you experience old pics popping up from time to time. 0.5-0.9 should be fine. Keep the value as high as possible for extremely popular tags. Never set it above 1!!!
 tags = "safe,spitfire" #The tags you want to apply to your search. Separate them by comma. Ex: "Safe, Spitfire, best pony"
 
 subject = "New Images!"   #The subject of the message you want to send!
@@ -46,7 +47,7 @@ while True:
     for image in Search().query(tags): #Fetch all image urls on first page
         newValues.append(image.url)
 
-    checkForNewImages = set(newValues).difference(set(oldValues))
+    checkForNewImages = set(newValues[0:int((len(newValues)*oldPicTolerance))]).difference(set(oldValues)) #Checks for the difference in NEW pics uploaded, not old ones. Might cause some bugs if a huge number of pics are uploaded in the span of delaytime.
 
     if checkForNewImages: #Any new images?
         print("New images found!")
@@ -69,5 +70,6 @@ while True:
             server.login(Hostmail, password)
             server.sendmail(Hostmail, ReceivingMail, message)
     else:
+        oldValues = newValues #Stores the new value for next iteration.
         newValues = []
         print("No new images")  
