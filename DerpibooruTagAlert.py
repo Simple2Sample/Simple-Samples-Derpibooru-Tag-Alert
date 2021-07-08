@@ -14,6 +14,7 @@ smtp_server = "smtp.gmail.com" #Don't touch unless you are not using Gmail.
 Hostmail = "" #The email sending the email.
 ReceivingMail = "" #The email you want to receive the email. It can be the same as the host mail but it is smart to have a separate email for scripts.
 key = "" #API key at https://derpibooru.org/registrations/edit
+SearchFilter = "" #Find the filter ID you want to use at https://derpibooru.org/filters. The ID is the numbers behind the URL. I recommend using "everything" in case you want full freedom. Watch out for unexpected lewd!
 password = "" #The password for your email. Don't worry, I will not and I cannot steal it. I barely know how to program this stuff, let alone a password stealer. Now that I think about it, I can make the program send your info to me pretty easily. DW I haven't done that. Just check the code below lol.
 
 delaytime = 15 #Minutes between each check. DO NOT SET THIS TO A VERY LOW AMOUNT. You can be banned.
@@ -39,12 +40,11 @@ print("Running!")
 oldValues = []
 newValues = []
 
-for image in Search().query(tags): #Initialising the initial value
+for image in Search().key(key).filter(SearchFilter).query(tags): #Initialising the initial value
   oldValues.append(image.url)
-
 while True:
     time.sleep(60*delaytime)
-    for image in Search().query(tags): #Fetch all image urls on first page
+    for image in Search().key(key).filter(SearchFilter).query(tags): #Fetch all image urls on first page
         newValues.append(image.url)
 
     checkForNewImages = set(newValues[0:int((len(newValues)*oldPicTolerance))]).difference(set(oldValues)) #Checks for the difference in NEW pics uploaded, not old ones. Might cause some bugs if a huge number of pics are uploaded in the span of delaytime.
@@ -61,14 +61,19 @@ while True:
         messagetext = text+" "+differenceInImages[1:-1]#Combines the URLs from set to string.
 
         message = 'Subject: {}\n\n{}'.format(subject, messagetext)#Formats the subject and text into a format understood by the function.
-
-        context = ssl.create_default_context()
-        with smtplib.SMTP(smtp_server, port) as server:#Magic magic sendy-email-thingy
-            server.ehlo()
-            server.starttls(context=context)
-            server.ehlo()
-            server.login(Hostmail, password)
-            server.sendmail(Hostmail, ReceivingMail, message)
+        while True:
+            try:
+                context = ssl.create_default_context()
+                with smtplib.SMTP(smtp_server, port) as server:#Magic magic sendy-email-thingy
+                    server.ehlo()
+                    server.starttls(context=context)
+                    server.ehlo()
+                    server.login(Hostmail, password)
+                    server.sendmail(Hostmail, ReceivingMail, message)
+                    break
+            except:
+                print("Something is wrong with the email sender. Check your internet connection or info if everything is correct. Retrying...")
+                time.sleep(60)
     else:
         if newValues: #Doesn't change the old value if the list is empty. This happens in case of server problems.
             oldValues = newValues #Stores the new value for next iteration.
