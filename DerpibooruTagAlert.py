@@ -82,7 +82,7 @@ while True:
             except:
                 print("Something is wrong with the email sender. Check your internet connection or info if everything is correct. Retrying...")
                 time.sleep(60)
-                continue
+                break
     else:
         if newValues: #Doesn't change the old value if the list is empty. This happens in case of server problems.
             oldValues = newValues #Stores the new value for next iteration.
