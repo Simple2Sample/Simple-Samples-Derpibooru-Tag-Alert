@@ -22,7 +22,7 @@ Yes I know it's weird. About one image of her is made every day, so I usually ne
 	This script also uses one external library because I could not be bothered to properly learn how one uses the JSON API for Derpibooru. Thanks a lot to https://github.com/joshua-stone/DerPyBooru.
 
 3. Run:
-	`pip install derpybooru`
+	`pip3 install derpybooru`
 4. Create a throwaway GMAIL account or use a GMAIL account you do not care about.
 	The script needs a Gmail account because they have some fancy stuff.
 5. Enable "Less Secure App Access" at https://myaccount.google.com/u/1/security (This is to make sure the script can use the Gmail account.)
