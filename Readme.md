@@ -28,7 +28,8 @@ Yes I know it's weird. About one image of her is made every day, so I usually ne
 5. Enable "Less Secure App Access" at https://myaccount.google.com/u/1/security (This is to make sure the script can use the Gmail account.)
 6. Fill in the empty variables in the userconfig part of the script.
 	- The comments in the script should explain it well enough.
-7. Once everything is filled in. Run the program and let it run 24/7.
+7. Once everything is filled in. Run the program and let it run 24/7 using the command:
+	`Python3 DerpibooruTagAlert.py` (Assuming you are in the same folder as the file)
 
 *I recommend letting it check every couple of minutes in the beginning to see if it works as it should.*
 ## Known Bugs
