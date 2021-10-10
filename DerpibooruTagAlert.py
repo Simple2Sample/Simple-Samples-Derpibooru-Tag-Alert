@@ -43,7 +43,7 @@ try:
     for image in Search().key(key).filter(searchFilter).query(tags): #Initialising the initial value
         oldValues.append(image.url)
 except:
-    print("Error initialising picture search")
+    print("Error initialising picture search. Check your internet connection")
 while True:
     time.sleep(60*delaytime)
     try:
@@ -53,7 +53,8 @@ while True:
 
             checkForNewImages = set(newValues[0:int((len(newValues)*oldPicTolerance))]).difference(set(oldValues)) #Checks for the difference in NEW pics uploaded, not old ones. Might cause some bugs if a huge number of pics are uploaded in the span of delaytime.
     except:
-        print("Error looking for changes")
+        print("Error connecting to the Derpibooru servers")
+        newValues = []
         continue
     
 
@@ -82,7 +83,6 @@ while True:
             except:
                 print("Something is wrong with the email sender. Check your internet connection or info if everything is correct. Retrying...")
                 time.sleep(60)
-                break
     else:
         if newValues: #Doesn't change the old value if the list is empty. This happens in case of server problems.
             oldValues = newValues #Stores the new value for next iteration.
