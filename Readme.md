@@ -13,7 +13,7 @@ Pretty simple, right?
 ## Why did you make this?
 Ok, I admit it. I'm kind of obsessed over Spitfire. I noticed that I was checking Derpibooru's tag of her very often, so instead I let this script do it for me.
 
-Yes I know it's weird. About one image of her is made every day, so I usually never find anything new. This script frees my time.
+Yes I know it's weird. About one image of her is made every one or two days, so I usually never find anything new whenever I look at Derpibooru. This script thus frees my time.
 # INSTRUCTIONS
 1. Install [Python3](https://www.python.org/). Linux users usually already have this.
 2. Install [pip](https://pypi.org/project/pip/). This is usually included in Python3.
