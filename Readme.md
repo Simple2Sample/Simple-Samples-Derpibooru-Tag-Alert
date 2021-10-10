@@ -3,7 +3,7 @@ Hey and thanks for checking this out!
 
 Made by Simple Sample
 
-## What does this do?
+## What does this script do?
 This program lets the user be notified whenever a new image on Derpibooru has been posted. When it detects a change, it will send an email to the user with a link to the new images found!
 
 That way you will never have to check Derpibooru repeatedly for new images of your best pony.
