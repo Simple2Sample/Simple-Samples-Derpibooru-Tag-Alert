@@ -19,7 +19,8 @@ Yes I know it's weird. About one image of her is made every one or two days, so 
 2. Install [pip](https://pypi.org/project/pip/). This is usually included in Python3.
 	- If not, follow these [instructions](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 
-	This script also uses one external library because I could not be bothered to properly learn how one uses the JSON API for Derpibooru. Thanks a lot to https://github.com/joshua-stone/DerPyBooru.
+
+This script also uses one external library because I could not be bothered to properly learn how one uses the JSON API for Derpibooru. Thanks a lot to https://github.com/joshua-stone/DerPyBooru.
 
 3. Run:
 	`pip3 install derpybooru`
