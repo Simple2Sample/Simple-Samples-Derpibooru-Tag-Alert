@@ -6,15 +6,17 @@ import time
 
 
 #### USERCONFIG ####
-###Write the required strings between the quotes!
+
+####Write the required strings between the quotes!####
 
 port = 587  # For starttls. Don't touch unless you know what you are doing
 smtp_server = "smtp.gmail.com" #Don't touch unless you are not using Gmail.
 
-hostMail = "" #The email sending the email.
-receivingMails = [""] #The emails you want to receive the email. It can be the same as the host mail but it is smart to have a separate email for scripts. You can have multiple receiving emails by writing them as ["email1","email2"]. Great if you want to share the alerter with multiple people. You just need their email.
+hostMail = "" #The email you want to send the alert from. Can also be the receiver. I recommend using a separate account for security reasons.
+receivingMails = [""] #The emails you want to receive the email. Separate the emails like this if you have multiple receivers: ["Email1","Email2"]
+                       #It can be the same as the host mail. Great if you want to share the alerter with multiple people as you just need their email.
 key = "" #API key at https://derpibooru.org/registrations/edit
-searchFilter = "" #Find the filter ID you want to use at https://derpibooru.org/filters. The ID is the numbers behind the URL. I recommend using "everything" in case you want full freedom. Watch out for unexpected lewd!
+searchFilter = "" #Find the filter ID you want to use at https://derpibooru.org/filters. The ID is the numbers behind the URL. I recommend using the "everything-filter" in case you want full freedom. Watch out for unexpected lewd!
 password = "" #The password for your email. Don't worry, I will not and I cannot steal it. I barely know how to program this stuff, let alone a password stealer. Now that I think about it, I can make the program send your info to me pretty easily. DW I haven't done that. Just check the code below lol.
 
 delaytime = 15 #Minutes between each check. DO NOT SET THIS TO A VERY LOW AMOUNT. You can be banned.
