@@ -14,7 +14,11 @@ Pretty simple, right?
 Ok, I admit it. I'm kind of obsessed over Spitfire. I noticed that I was checking Derpibooru's tag of her very often, so instead I let this script do it for me.
 
 Yes I know it's weird. About one image of her is made every one or two days, so I usually never find anything new whenever I look at Derpibooru. This script thus frees my time.
+
 # INSTRUCTIONS
+
+I recommend running this script on a Raspberry Pi or a server of some sort.
+
 1. Install [Python3](https://www.python.org/). Linux users usually already have this.
 2. Install [pip](https://pypi.org/project/pip/). This is usually included in Python3.
 	- If not, follow these [instructions](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
