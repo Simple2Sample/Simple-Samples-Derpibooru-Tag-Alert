@@ -4,7 +4,7 @@ Hey and thanks for checking this out!
 Made by Simple Sample
 
 # WARNING
-As of 4th of March 2022, Google will remove "Less Secure App Access" which the script relies on. To make it work again after 30th of May, use "App Password" as shown here https://support.google.com/accounts/answer/185833?
+As of 4th of March 2022, Google will remove "Less Secure App Access" which the script relies on. To make it work again after 30th of May, use "App Password" as shown here https://support.google.com/accounts/answer/185833 and simply replace the password with the app password.
 
 ## What does this script do?
 This script lets the user be notified whenever a new image on Derpibooru has been posted. When it detects a change, it will send an email to the user with a link to the new images found!
