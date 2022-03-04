@@ -3,6 +3,9 @@ Hey and thanks for checking this out!
 
 Made by Simple Sample
 
+# WARNING
+As of 4th of March 2022, Google will remove "Less Secure App Access" which the script relies on. To make it work again after 30th of May, use "App Password" as shown here https://support.google.com/accounts/answer/185833?
+
 ## What does this script do?
 This script lets the user be notified whenever a new image on Derpibooru has been posted. When it detects a change, it will send an email to the user with a link to the new images found!
 
@@ -30,10 +33,10 @@ This script also uses one external library because I could not be bothered to pr
 	`pip3 install derpybooru`
 4. Create a throwaway GMAIL account or use a GMAIL account you do not care about.
 	The script needs a Gmail account because they have some fancy stuff.
-5. Enable "Less Secure App Access" at https://myaccount.google.com/u/1/security (This is to make sure the script can use the Gmail account.)
-6. Fill in the empty variables in the userconfig part of the script.
+5. Enable "App Password" as shown in https://support.google.com/accounts/answer/185833? The app password provided by Google will be the password for the script.
+7. Fill in the empty variables in the userconfig part of the script.
 	- The comments in the script should explain it well enough.
-7. Once everything is filled in. Run the program and let it run 24/7 using the command:
+8. Once everything is filled in. Run the program and let it run 24/7 using the command:
 	`Python3 DerpibooruTagAlert.py` (Assuming you are in the same folder as the file)
 
 *I recommend letting it check every couple of minutes in the beginning to see if it works as it should.*
